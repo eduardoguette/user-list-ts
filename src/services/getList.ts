@@ -1,8 +1,8 @@
 import { UserListResponse } from '../intefaces'
 
-export const getList = async () => {
+export const getList = async (numberPage: number) => {
   try {
-    const url = 'https://reqres.in/api/users'
+    const url = `https://reqres.in/api/users?page=${numberPage}`
     const response = await fetch(url)
     const data: UserListResponse = await response.json()
     return data.data

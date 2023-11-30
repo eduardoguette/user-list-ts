@@ -18,7 +18,11 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".", // Esto indica que la base del proyecto es la raíz
+    "paths": {
+      "@/*": ["./src/*"] // Esto redirige todas las importaciones con @ a la carpeta src
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

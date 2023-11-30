@@ -1,10 +1,10 @@
 export interface UserListResponse {
-  page:        number;
-  per_page:    number;
-  total:       number;
-  total_pages: number;
-  data:        Item[];
-  support:     Support;
+  page: number
+  per_page: number
+  total: number
+  total_pages: number
+  data: Item[]
+  support: Support
 }
 
 export interface Item {
@@ -18,4 +18,12 @@ export interface Item {
 export interface Support {
   url: string
   text: string
+}
+export interface userAuth {
+  token: string | null
+}
+
+export interface userAuthParams {
+  email: string  
+  password: string 
 }
